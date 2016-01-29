@@ -1,14 +1,1 @@
-<h1> Enter a choice for Question: <%=@question.text%></h1>
-
-<form action = '/choices' method = 'post'>
-  <label for='choice[text]'>Choice:</label>
-  <input type = 'text' name = 'choice[text]'>
-
-  <input type = 'submit' value = 'Add Choice'>
-
-  <input type='hidden' name='choice[question_id]' value='<%=@question.id%>'>
-</form>
-
-<button><a href = "/surveys/<%=@question.survey_id%>/questions/new" >Next Question</a></button>
-
-<button><a href = "/surveys/<%=@question.survey_id%>">I'm done with my survey</a></button>
+<%=erb :'/choices/_choices_form', layout: false, locals: {question: question}%>

@@ -1,0 +1,7 @@
+<h1> Enter a choice for Question: <%=question.text%></h1>
+
+<button><a href = "/surveys/<%=question.survey_id%>/questions/new" >Next Question</a></button>
+
+<button><a href = "/surveys/<%=question.survey_id%>">I'm done with my survey</a></button>
+
+<%=erb :'choices/_one_choice_form', layout:false, locals: {question: question} %>
