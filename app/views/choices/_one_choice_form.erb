@@ -1,0 +1,8 @@
+<form class = 'add-choice' action = '/choices' method = 'post'>
+  <label for='choice[text]'>Choice:</label>
+  <input type = 'text' name = 'choice[text]'>
+
+  <input type = 'submit' value = 'Add Choice'>
+
+  <input type='hidden' name='choice[question_id]' value='<%=question.id%>'>
+</form>

@@ -1,0 +1,13 @@
+<h1> <%= survey.title %></h1>
+<h1> Create question. </h1>
+
+<form id = 'add-question' action = '/questions' method = 'post'>
+  <label for='question[text]'>Question</label>
+  <input type = 'text' name = 'question[text]'>
+
+  <input type='hidden' name='question[survey_id]' value='<%=survey.id%>'>
+
+  <input type = 'submit' value = 'Add Question'>
+</form>
+
+<button><a href = "/surveys/<%=survey.id%>">I'm done with my survey</a></button>
