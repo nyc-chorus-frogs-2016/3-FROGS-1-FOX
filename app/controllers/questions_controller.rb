@@ -4,10 +4,7 @@ get '/surveys/:id/questions/new' do
 end
 
 post '/questions' do
-  question = Question.create(params[:question])
+  @question = Question.create(params[:question])
 
-  Choice.create(text: params[:choice][:choice_1], question_id: question.id)
-  Choice.create(text: params[:choice][:choice_2], question_id: question.id)
-  Choice.create(text: params[:choice][:choice_3], question_id: question.id)
-  redirect "/surveys/#{question.survey_id}/questions/new"
+  redirect "/questions/#{@question.id}/choices/new"
 end

@@ -1,17 +1,8 @@
-<h1> Create question and its choices. You must enter three choices. </h1>
+<h1> Create question. </h1>
 
 <form action = '/questions' method = 'post'>
   <label for='question[text]'>Question</label>
   <input type = 'text' name = 'question[text]'>
-
-  <label for='choice[choice_1]'>Choice 1</label>
-  <input type = 'text' name = 'choice[choice_1]'>
-
-  <label for='choice[choice_2]'>Choice 2</label>
-  <input type = 'text' name = 'choice[choice_2]'>
-
-  <label for='choice[choice_3]'>Choice 3</label>
-  <input type = 'text' name = 'choice[choice_3]'>
 
   <input type='hidden' name='question[survey_id]' value='<%=@survey.id%>'>
 

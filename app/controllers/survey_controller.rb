@@ -3,6 +3,7 @@ get '/surveys/new' do
 end
 
 get '/surveys/:id' do
+  # erb :'/surveys/show'
 end
 
 post '/surveys' do
