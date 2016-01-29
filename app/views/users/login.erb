@@ -1,0 +1,25 @@
+<section class='login-form'>
+  <%if logged_in? %>
+  <h2>Welcome, <%=current_user.username%>! You are already logged in. Log out?</h2>
+    <form action='/sessions/logout' method='post'>
+      <input type='hidden' name='_method' value='delete'/>
+      <input type='submit' value='Yes, log out.' />
+    </form>
+  <%else%>
+    <%if @success%>
+    <h2>You've successfully created your account!</h2>
+    <%end%>
+    <h2>Log me in!</h2>
+    <form action='/sessions' method='post'>
+      <ul>
+        <li>Username: <input type='text' name='username' placeholder='username'/></li>
+        <li>Password: <input type='password' name='password' placeholder='password'></li>
+        <li><input type='submit' value='log in' /></li>
+      </ul>
+    </form>
+
+    <% if !@success %>
+      <p>Or... <a href="/users/new">Create an account</a>!
+    <% end %>
+  <%end%>
+</section>
