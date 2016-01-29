@@ -11,3 +11,6 @@ post '/surveys' do
   survey = Survey.create(params[:survey])
   redirect "/surveys/#{survey.id}/questions/new"
 end
+
+
+

@@ -7,3 +7,4 @@ post '/choices' do
   @choice = Choice.create(params[:choice])
   redirect "/questions/#{@choice.question_id}/choices/new"
 end
+

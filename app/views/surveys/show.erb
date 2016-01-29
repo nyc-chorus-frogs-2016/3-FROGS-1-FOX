@@ -1,14 +1,10 @@
 <h1>Survey <%=@survey.title%></h1>
 
+
 <%@survey.questions.each do |question|%>
 
-<ul>
-  <li><%=question.text%>
-    <ul><%question.choices.each do |choice|%>
-      <li><%=choice.text%></li>
-      <%end%>
-    </ul>
-  </li>
-</ul>
+  <h3><%=question.text%></h3>
 
 <%end%>
+
+<a href = "/questions/<%=survey.questions.first.id%>">Start Survey</a>
