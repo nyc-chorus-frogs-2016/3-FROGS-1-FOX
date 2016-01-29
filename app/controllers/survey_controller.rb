@@ -8,8 +8,13 @@ get '/surveys/:id' do
 end
 
 post '/surveys' do
+
   survey = Survey.create(params[:survey])
-  redirect "/surveys/#{survey.id}/questions/new"
+  if request.xhr?
+    erb :'/questions/_question_form', layout: false, locals: {survey: survey}
+  else
+    redirect "/surveys/#{survey.id}/questions/new"
+  end
 end
 
 

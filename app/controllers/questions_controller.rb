@@ -9,8 +9,12 @@ get '/questions/:id' do
 end
 
 post '/questions' do
-  @question = Question.create(params[:question])
-  redirect "/questions/#{@question.id}/choices/new"
+  question = Question.create(params[:question])
+  if request.xhr?
+    erb :'/choices/_choices_form', layout: false, locals: {question: question}
+  else
+    redirect "/questions/#{question.id}/choices/new"
+  end
 end
 
 post '/questions/:id/responses' do
