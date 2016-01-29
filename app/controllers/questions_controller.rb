@@ -5,6 +5,5 @@ end
 
 post '/questions' do
   @question = Question.create(params[:question])
-
   redirect "/questions/#{@question.id}/choices/new"
 end

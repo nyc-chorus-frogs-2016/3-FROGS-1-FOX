@@ -3,7 +3,8 @@ get '/surveys/new' do
 end
 
 get '/surveys/:id' do
-  # erb :'/surveys/show'
+  @survey = Survey.find_by(id: params[:id])
+  erb :'/surveys/show'
 end
 
 post '/surveys' do
