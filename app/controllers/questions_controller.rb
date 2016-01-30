@@ -14,8 +14,16 @@ end
 
 get '/questions/:question_id' do
   @question = Question.find_by(id: params[:question_id])
-  erb :'/questions/show'
+  if request.xhr?
+    erb :'/questions/_take_question', layout: false, locals: {question: @question}
+  else
+    erb :'/questions/show'
+  end
 end
+
+# get '/questions/:question_id/votes' do
+#   erb :
+# end
 
 post '/questions/:question_id/votes' do
   @question = Question.find_by(id: params[:question_id])

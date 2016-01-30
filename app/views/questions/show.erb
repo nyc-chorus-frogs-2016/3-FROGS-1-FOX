@@ -1,11 +1,4 @@
-<h3><%=@question.text%></h3>
-
-<form action = "/questions/<%=@question.id%>/votes" method="post">
-
-<%@question.choices.each do |choice|%>
-      <li><input type="radio" name="choice" value="<%=choice.id%>" ><%=choice.text%></li>
-<%end%>
-
-<input type="submit" value="Submit">
-
-</form>
+<section id='taking-survey'>
+  <h2>Taking Survey </h2>
+<%=erb :'/questions/_take_question', layout: false, locals: {question: @question} %>
+</section>

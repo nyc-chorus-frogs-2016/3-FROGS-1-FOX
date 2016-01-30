@@ -14,6 +14,7 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
+  <script src="/js/application2.js"></script>
 
   <title>3 Frogs | 1 Fox</title>
 </head>
@@ -21,16 +22,16 @@
   <section class='wrapper'>
     <header>
       <a href="/" class='logo'>
-        <h1>3 Frogs | 1 Fox</h1>
+        <h1>3 Frogs & 1 Fox</h1>
       </a>
       <nav>
         <ul>
            <%if !logged_in?%>
-             <li><a href="/users/new">register |</a></li>
-             <li><a href="/users/login">login |</a></li>
+             <li><a href="/users/new">register</a></li>
+             <li><a href="/users/login">login</a></li>
            <%else%>
-             <li><a href="/users/<%=current_user.id%>">welcome <%=current_user.username%> |</a></li>
-             <li><a href="/users/login">logout |</a></li>
+             <li><a href="/users/<%=current_user.id%>">welcome <%=current_user.username%></a></li>
+             <li><a href="/users/login">logout</a></li>
            <%end%>
           <li><a href="/">home</a></li>
         </ul>
@@ -39,6 +40,9 @@
     <div id="content">
       <%= yield %>
     </div>
+    <footer>
+
+    </footer>
   </section>
 </body>
 </html>

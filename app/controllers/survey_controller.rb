@@ -4,7 +4,11 @@ end
 
 
 get '/surveys/done' do
-  erb :'/surveys/done'
+  if request.xhr?
+     erb :'/surveys/_done_message', layout: false
+  else
+     erb :'/surveys/done'
+  end
 end
 
 get '/surveys/:id' do
