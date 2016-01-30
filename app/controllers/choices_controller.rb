@@ -12,4 +12,3 @@ post '/choices' do
     redirect "/questions/#{choice.question_id}/choices/new"
   end
 end
-
