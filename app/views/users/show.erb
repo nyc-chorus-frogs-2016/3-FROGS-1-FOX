@@ -10,6 +10,6 @@
 <h1>Take a Survey below:</h1>
 <ul>
 <% Survey.all.each do |survey|%>
-  <li><a href="/surveys/<%=survey.id%>/questions/<%=survey.first_question_id(survey.id)%>"><%=survey.title%></a></li>
+  <li><a href="/questions/<%=survey.first_question_id(survey.id)%>"><%=survey.title%></a></li>
 <% end %>
 </ul>
