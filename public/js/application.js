@@ -39,7 +39,6 @@ $(document).ready(function() {
       data: $(event.target).serialize()
     };
     $.ajax(request).done(function(response){
-      debugger
       $('#create-survey').append(response);
     }).fail(function(response){
       console.log(response);
