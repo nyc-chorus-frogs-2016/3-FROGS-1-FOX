@@ -1,6 +1,6 @@
 <h3><%=@question.text%></h3>
 
-<form action = "/questions/<%=@question.id%>/answers" method="post">
+<form action = "/questions/<%=@question.id%>/votes" method="post">
 
 <%@question.choices.each do |choice|%>
       <li><input type="radio" name="choice" value="<%=choice.id%>" ><%=choice.text%></li>
