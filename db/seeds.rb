@@ -1,10 +1,10 @@
-jenna = User.new(username: 'jenna', password_hash: 'abc123')
+jenna = User.new(username: 'jenna', password: 'abc123')
 jenna.save
-kristie = User.new(username: 'kristie', password_hash: 'kristie')
+kristie = User.new(username: 'kristie', password: 'kristie')
 kristie.save
-scott = User.new(username: 'scott', password_hash: 'fox')
+scott = User.new(username: 'scott', password: 'fox')
 scott.save
-mira = User.new(username: 'mira', password_hash: 'frog')
+mira = User.new(username: 'mira', password: 'frog')
 mira.save
 
 

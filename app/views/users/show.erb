@@ -1,6 +1,6 @@
 <h2><%=current_user.username%>'s Profile</h2>
 <ul>
 <% @user.surveys.each do |survey|%>
-  <li><a href="/surveys/<%=survey.id%>"><%=survey.title%></a></li>
+  <li><a href="/surveys/#{survey.id}"><%=survey.title%></a></li>
 <% end %>
 </ul>
