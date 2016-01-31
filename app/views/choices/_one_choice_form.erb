@@ -1,8 +1,10 @@
-<form class = 'add-choice' action = '/choices' method = 'post'>
-  <label for='choice[text]'>Choice:</label>
-  <input type = 'text' name = 'choice[text]'>
-
-  <input type = 'submit' value = 'Add Choice'>
-
+<form class='add-choice pure-form pure-form-aligned' action = '/choices' method = 'post'>
+  <div class="pure-control-group">
+    <label for='choice[text]'>Choice:</label>
+    <input type = 'text' name = 'choice[text]'>
+  </div>
+  <div class="choice-button pure-controls">
+    <input class="pure-button pure-button-primary" type = 'submit' value = 'Add Choice'>
+  </div>
   <input type='hidden' name='choice[question_id]' value='<%=question.id%>'>
 </form>

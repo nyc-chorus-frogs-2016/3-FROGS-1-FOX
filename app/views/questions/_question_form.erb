@@ -1,13 +1,15 @@
 <h1> <%= survey.title %></h1>
-<h1> Create question. </h1>
+<h1> Create question </h1>
 
-<form id = 'add-question' action = '/questions' method = 'post'>
-  <label for='question[text]'>Question</label>
-  <input type = 'text' name = 'question[text]'>
-
+<form class="pure-form pure-form-aligned" id = 'add-question' action = '/questions' method = 'post'>
+  <div class="pure-control-group">
+    <label for='question[text]'>Question</label>
+    <input type = 'text' name = 'question[text]'>
+  </div>
   <input type='hidden' name='question[survey_id]' value='<%=survey.id%>'>
-
-  <input type = 'submit' value = 'Add Question'>
+  <div class="pure-controls">
+    <input class="pure-button pure-button-primary" type = 'submit' value = 'Add Question'>
+  </div>
 </form>
 
-<button><a href = "/surveys/<%=survey.id%>">I'm done with my survey</a></button>
+<button><a class='btn' href = "/surveys/<%=survey.id%>">I'm done with my survey</a></button>

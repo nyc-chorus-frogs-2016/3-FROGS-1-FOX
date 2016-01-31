@@ -39,6 +39,7 @@ $(document).ready(function() {
       data: $(event.target).serialize()
     };
     $.ajax(request).done(function(response){
+      $('.choice-button').hide();
       $('#create-survey').append(response);
     }).fail(function(response){
       console.log(response);
