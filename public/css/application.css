@@ -37,28 +37,30 @@ ul li {
          Colors
 ********************************/
 
-body {
-  color: #017ca1;
+body, .btn {
+  color: #056EFF;
 }
 
 header {
-  border-bottom: 4px solid #10b9ec;
+  border-bottom: 4px solid #00A2E8;
 }
 
 .logo h1 {
-  color: #017ca1;
+  color: #0077E8;
 }
 
-a {
-  color: #0aa4d2;
+a, a:visited {
+  color: #002675;
+
 }
+
 
 nav a, nav a:visited {
-  color: #017ca1;
+  color: #0077E8;
 }
 
 nav a.selected, nav a:hover {
-  color: #0aa4d2;
+  color: #009AFF;
 }
 
 
@@ -119,4 +121,26 @@ nav a {
   padding: 10px;
 }
 
+
+
+/******************************
+            Forms
+********************************/
+
+button {
+  margin: 15px 10px;
+}
+
+.pure-button {
+  margin-bottom: 10px;
+}
+
+
+#take-survey-question div {
+  position: relative;
+  left: 10%;
+  margin: 0 auto;
+  width: 40%;
+  text-align: left;
+}
 

@@ -1,13 +1,14 @@
 <h3><%=question.text%></h3>
 
 <form id="take-survey-question" action = "/questions/<%=question.id%>/votes" method="post">
+  <div>
   <ul>
     <%question.choices.each do |choice|%>
           <li><input type="radio" name="choice" value="<%=choice.id%>" > <%=choice.text%></li>
     <%end%>
-
-    <li><input type="submit" value="Submit"></li>
+      <li><input class="pure-button pure-button-primary" type="submit" value="Submit"></li>
   </ul>
+  </div>
 
 
 </form>
