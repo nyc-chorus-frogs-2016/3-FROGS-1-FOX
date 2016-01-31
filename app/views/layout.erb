@@ -10,19 +10,20 @@
   <!--
     application.css is where you put your styles
   -->
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,700italic|Merriweather+Sans:400,700' rel='stylesheet' type='text/css'>
+
   <link rel="stylesheet" href="/css/application.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
   <script src="/js/application2.js"></script>
-
-  <title>3 Frogs | 1 Fox</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3 Frogs &amp 1 Fox</title>
 </head>
 <body>
-  <section class='wrapper'>
     <header>
       <a href="/" class='logo'>
-        <h1>3 Frogs & 1 Fox</h1>
+        <h1>3 Frogs &amp 1 Fox</h1>
       </a>
       <nav>
         <ul>
@@ -32,17 +33,19 @@
            <%else%>
              <li><a href="/users/<%=current_user.id%>">welcome <%=current_user.username%></a></li>
              <li><a href="/users/login">logout</a></li>
+             <li><a href="/surveys/new">create</a></li>
            <%end%>
           <li><a href="/">home</a></li>
         </ul>
       </nav>
     </header>
+    <section class='wrapper'>
     <div id="content">
       <%= yield %>
     </div>
+    </section>
     <footer>
 
     </footer>
-  </section>
 </body>
 </html>
